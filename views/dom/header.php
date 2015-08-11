@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="assets/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/jquery-2.1.4.min.js"></script>
 </head>
 <body>
 
