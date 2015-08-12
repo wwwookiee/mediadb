@@ -12,22 +12,37 @@
 <body>
 
  <div class="navbar-fixed">
+
     <nav>
+
       <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">MediaDB</a>
-        <ul class="right hide-on-med-and-down">
-          <li>
-          <form action="?" method="get">
-            <div class="input-field">
-              <input id="search" type="search" name="search" required>
-              <label for="search"><i class="material-icons">search</i></label>
-              <i class="material-icons">close</i>
-            </div>
-            </form>
-          </li>
-        </ul>
+
+        <a href="?page=welcome" class="brand-logo">MediaDB</a>
+
+        <?php if(isset($_SESSION['key02'])){?>
+
+          <ul class="right hide-on-med-and-down">
+
+            <li><a href="?page=artists">Artists</a></li>
+
+            <li>
+              <form action="?" method="get">
+                <div class="input-field">
+                  <input id="search" type="search" name="search" required>
+                  <label for="search"><i class="material-icons">search</i></label>
+                  <i class="material-icons">close</i>
+                </div>
+              </form>
+            </li>
+
+          </ul>
+
+        <?php } ?>
+
       </div>
+
     </nav>
+
   </div>
 
 <div class="container">

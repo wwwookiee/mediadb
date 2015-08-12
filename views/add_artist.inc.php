@@ -1,6 +1,8 @@
-<?php require_once 'models/login.inc.php'; ?>
+<?php require_once 'models/artist.inc.php'; ?>
 
-<form action="?" method="post">
+<h1>add artist</h1>
+
+<form action="?page=add_artist" method="post">
 	<div class="row">
 		<div class="input-field col l6 offset-l3">
 			<input id="login" class="validate" name="login" type="text" placholder="Enter your login" >
