@@ -1,7 +1,7 @@
 <?php if($debug == true) {?>
 
  <a id="debug" style="position:fixed; left: 23px; bottom: 45px;" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">info_outline</i></a>
-<div  class="debug_dial hide" style="z-index: 9999999999999; position:absolute; left:50%; margin-left: -450px; top: 100px; padding: 10px; width:900px; background: teal; color: white;">
+<div  class="debug_dial hide" style="z-index: 9999999999999; position:relative; left:50%; margin-left: -450px; top: 100px; padding: 10px; width:900px; background: teal; color: white; overflow: visible;">
 	<a href="?destroy">session_destroy()</a>
 	<p>POST</p>
 	<pre><?php var_dump($_POST);?></pre>

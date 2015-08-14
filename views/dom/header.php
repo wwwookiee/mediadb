@@ -24,6 +24,7 @@
           <ul class="right hide-on-med-and-down">
 
             <li><a href="?page=artists">Artists</a></li>
+            <li><a href="?page=albums">Albums</a></li>
 
             <li>
               <form action="?" method="get">

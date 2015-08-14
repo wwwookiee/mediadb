@@ -1,10 +1,10 @@
 <?php
 session_start();
 $_SESSION['key01'] = 'key01';
-!isset($_SESSION['key02']) ? $_GET['page'] = 'login' : null;
+!isset($_SESSION['key02']) || !isset($_GET['page']) ? $_GET['page'] = 'login' : null;
 
 require_once 'libs/date.inc.php';
-require_once 'models/db_connect.inc.php';
+require_once 'models/global.inc.php';
 include 'views/dom/header.php';
 
 $debug = true;
@@ -25,6 +25,29 @@ if ($_SESSION['key01'] && !isset($_SESSION['key02'])) {
 		case 'add_artist':
 			include 'views/add_artist.inc.php';
 			break;
+		case 'modify_artist':
+			include 'views/modify_artist.inc.php';
+			break;
+		case 'delete_artist':
+			include 'views/delete_artist.inc.php';
+			break;
+		case 'albums':
+			include 'views/albums.inc.php';
+			break;
+		case 'add_album':
+			include 'views/add_album.inc.php';
+			break;
+		case 'detail_album':
+			include 'views/detail_album.inc.php';
+			break;
+		case 'modify_album':
+			include 'views/add_album.inc.php';
+			break;
+		case 'delete_album':
+			include 'views/add_album.inc.php';
+			break;
+
+
 		default:
 			include 'views/welcome.inc.php';
 			break;

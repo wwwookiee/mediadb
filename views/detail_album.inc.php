@@ -1,17 +1,17 @@
 <?php
 
-require_once 'models/artists.inc.php';
+require_once 'models/albums.inc.php';
 
 
-$artist = get_artist_details($_GET['id']);
+$album = get_album_details($_GET['id']);
 
 ?>
 <div class="row center">
-	<h2 class="center"><?php echo $artist['label'] ?>
+	<h2 class="center"><?php echo $album['label'] ?>
 		</h2>
 </div>
 <div class="row center">
-<img class="activator circle" src="http://lorempixel.com/300/300/people"><br>
+<img class="activator circle" src="http://lorempixel.com/300/300/abstract"><br>
 	<a class="tooltipped" href="index.php?page=modify_artist&id=<?php echo $_GET['id'] ?>" data-position="bottom" data-delay="50" data-tooltip="Modify artist" style="cursor:pointer">
 			<i class="small material-icons">mode_edit</i>
 		</a>
@@ -33,13 +33,9 @@ $artist = get_artist_details($_GET['id']);
 
 
 <div class="row">
-	<h5>Real name</h5><p><?php echo $artist['firstname']." ".$artist['lastname']; ?></p>
-	<h5>Nickname</h5><p><?php if($artist['nickname'] !== ""){ echo $artist['nickname']; }else{echo 'none';} ?></p>
-	<h5>Born</h5><p><?php  echo date_transform($artist['birthdate'])." in ".$artist['birthlocation']; ?></p>
-	<h5>Nationality</h5><p><?php $nat = get_artist_nationality($artist['nationalityID']); echo $nat['label']; ?></p>
-	<h5>Biography</h5><p><?php echo $artist['biography'] ?></p>
-	<p><a href="<?php echo $artist['website'] ?>"><?php echo $artist['website'] ?></a></p>
-
+	<h5>Artist</h5><p><?php echo $album['artisteID']; ?></p>
+	<h5>Release Date</h5><p><?php echo date_transform($album['releaseDate']);?></p>
+	<h5>Description</h5><p><?php  echo $album['description']; ?></p>
 </div>
 
 

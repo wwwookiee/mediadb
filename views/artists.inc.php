@@ -8,7 +8,7 @@ $artistList = get_artists_list();
 // display($artistList);
 
 echo '<div class="row">';
-for ($i=0; $i < count($artistList) ; $i++) { 
+for ($i=0; $i < count($artistList) ; $i++) {
 
 $id = $artistList[$i]['artisteID'];
 $artistURL = "index.php?page=artist-detail&id=$id";
